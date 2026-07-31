@@ -242,6 +242,22 @@
   .course-card p{color:var(--text-mut);font-size:.93rem;flex-grow:1;}
   .course-card span{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;}
 
+  .cert-section{margin-top:2.5rem;}
+  .cert-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem;}
+  .cert-head h3{font-size:1.1rem;font-weight:600;}
+  .cert-carousel-wrap{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);}
+  .cert-carousel{display:flex;gap:1rem;padding:1rem;transition:transform .6s ease;will-change:transform;}
+  .cert-card{flex:0 0 calc(33.333% - .67rem);min-width:260px;background:linear-gradient(180deg,rgba(18,28,46,.95),var(--surface));border:1px solid var(--line);border-radius:var(--radius);padding:1.35rem;display:flex;flex-direction:column;gap:.9rem;}
+  .cert-card h4{font-size:1rem;font-weight:700;margin:0;}
+  .cert-card .issuer{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--text-dim);}
+  .cert-card .cert-meta{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;}
+  .cert-card p{color:var(--text-mut);font-size:.92rem;line-height:1.5;}
+  .cert-dots{display:flex;justify-content:center;gap:.55rem;margin-top:1rem;}
+  .cert-dot{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s;}
+  .cert-dot.active{background:var(--amber);}
+  @media (max-width:900px){.cert-card{flex:0 0 calc(50% - .5rem);}}
+  @media (max-width:620px){.cert-card{flex:0 0 100%;}}
+
   /* ---------- CONTACT ---------- */
   .contact-wrap{
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
@@ -558,6 +574,45 @@
           <p>Programa educativo con enfoque en modelado estadístico, machine learning y soluciones de IA aplicadas a problemas reales.</p>
         </div>
       </div>
+
+      <div class="cert-section reveal">
+        <div class="cert-head">
+          <div>
+            <div class="eyebrow">Certificados</div>
+            <h3>Reconocimientos y certificados que giran automáticamente.</h3>
+          </div>
+          <div class="cert-meta">Autoplay cada 4 segundos</div>
+        </div>
+        <div class="cert-carousel-wrap">
+          <div class="cert-carousel" id="certCarousel">
+            <div class="cert-card">
+              <span class="cert-meta">Data Science</span>
+              <h4>Certificado en Machine Learning</h4>
+              <div class="issuer">Coursera / Stanford</div>
+              <p>Validación de habilidades en regresión, clasificación, redes neuronales y modelos de desempeño.</p>
+            </div>
+            <div class="cert-card">
+              <span class="cert-meta">Analytics</span>
+              <h4>Especialización Power BI</h4>
+              <div class="issuer">Microsoft Learn</div>
+              <p>Experiencia práctica en construcción de dashboards, KPIs y reportes interactivos para análisis empresarial.</p>
+            </div>
+            <div class="cert-card">
+              <span class="cert-meta">AI</span>
+              <h4>Curso Avanzado de Python</h4>
+              <div class="issuer">Platzi / Python Monterrey</div>
+              <p>Dominio en programación, automatización y pipeline de datos para proyectos de ciencia de datos.</p>
+            </div>
+            <div class="cert-card">
+              <span class="cert-meta">Statistics</span>
+              <h4>Certificado en Estadística Aplicada</h4>
+              <div class="issuer">ITAM / Data Center</div>
+              <p>Fundamentos y aplicabilidad en minería de datos, inferencia estadística y análisis predictivo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cert-dots" id="certDots"></div>
+      </div>
     </div>
   </section>
 
@@ -669,6 +724,50 @@
     });
   }, {rootMargin:'-40% 0px -50% 0px'});
   sections.forEach(s => navIo.observe(s));
+
+  // certificate carousel
+  const carousel = document.getElementById('certCarousel');
+  const dotsContainer = document.getElementById('certDots');
+  if(carousel && dotsContainer){
+    const cards = carousel.querySelectorAll('.cert-card');
+    let activeIndex = 0;
+
+    const renderDots = () => {
+      dotsContainer.innerHTML = '';
+      cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'cert-dot' + (index === activeIndex ? ' active' : '');
+        dot.addEventListener('click', () => setActive(index));
+        dotsContainer.append(dot);
+      });
+    };
+
+    const setActive = (index) => {
+      activeIndex = index;
+      const offset = -(index * (cards[0].offsetWidth + 16));
+      carousel.style.transform = `translateX(${offset}px)`;
+      dotsContainer.querySelectorAll('.cert-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    };
+
+    renderDots();
+    setActive(0);
+
+    let carouselTimer = setInterval(() => {
+      setActive((activeIndex + 1) % cards.length);
+    }, 4000);
+
+    carousel.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+    carousel.addEventListener('mouseleave', () => {
+      carouselTimer = setInterval(() => {
+        setActive((activeIndex + 1) % cards.length);
+      }, 4000);
+    });
+
+    window.addEventListener('resize', () => setActive(activeIndex));
+  }
 </script>
 
 </body>
