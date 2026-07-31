@@ -242,7 +242,16 @@
   .course-card .course-provider{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text-dim);margin-bottom:.9rem;}
   .course-card p{color:var(--text-mut);font-size:.93rem;flex-grow:1;}
   .course-card span{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;}
-
+  .course-card{transform-style:preserve-3d;will-change:transform;}
+  .course-card:hover{transform:translateY(-6px) rotateX(1deg) rotateY(1deg);box-shadow:0 24px 70px rgba(0,0,0,.18);}
+  .course-highlight{background:rgba(63,191,181,.08);border:1px solid rgba(63,191,181,.16);border-radius:calc(var(--radius) + 4px);padding:1.5rem 1.75rem;margin-bottom:1.7rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;}
+  .course-highlight p{color:var(--text-mut);max-width:56ch;}
+  .course-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+  .course-metric{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem;}
+  .course-metric strong{display:block;font-size:1.35rem;color:var(--text);margin-bottom:.35rem;}
+  .course-metric span{font-size:.82rem;color:var(--text-dim);}
+  .cert-btn{margin-top:.75rem;display:inline-flex;align-items:center;gap:.45rem;padding:.62rem 1rem;border:1px solid var(--amber);border-radius:999px;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;color:var(--amber);transition:.2s;background:rgba(237,163,59,.08);}
+  .cert-btn:hover{background:rgba(237,163,59,.16);}
   .cert-card img{width:100%;border-radius:10px;object-fit:cover;height:140px;margin-bottom:1rem;}
   .cert-section{margin-top:2.5rem;}
   .cert-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem;}
@@ -556,6 +565,17 @@
         <div class="eyebrow">Courses</div>
         <h2>Training and workshops delivered for a wide audience.</h2>
       </div>
+      <div class="course-highlight reveal">
+        <div>
+          <h3>Featured learning path</h3>
+          <p>Hands-on trainings paired with certificates and real-world outcomes to make every course feel premium and memorable.</p>
+        </div>
+        <div class="course-metrics">
+          <div class="course-metric"><strong>5+</strong><span>Learning experiences delivered</span></div>
+          <div class="course-metric"><strong>1K+</strong><span>Participants trained</span></div>
+          <div class="course-metric"><strong>100%</strong><span>Practical project focus</span></div>
+        </div>
+      </div>
       <div class="course-grid reveal">
         <div class="course-card">
           <img src="https://via.placeholder.com/420x220?text=Data+Science" alt="Sample course image" loading="lazy">
@@ -596,6 +616,7 @@
               <h4>Mastering Prompt Engineering</h4>
               <div class="issuer">IBM</div>
               <p>Effective instructions for AI language models, with skills in AI prompts and artificial intelligence.</p>
+              <a class="cert-btn" href="#">View credential</a>
             </div>
             <div class="cert-card">
               <img src="https://via.placeholder.com/360x180?text=Datlas" alt="Sample certificate image" loading="lazy">
@@ -603,6 +624,7 @@
               <h4>15 Introductory Techniques in Data Analytics with Python</h4>
               <div class="issuer">Datlas</div>
               <p>Introductory analytics techniques using Python, including visualizations and data-driven insights.</p>
+              <a class="cert-btn" href="#">View credential</a>
             </div>
             <div class="cert-card">
               <img src="https://via.placeholder.com/360x180?text=MIT" alt="Sample certificate image" loading="lazy">
@@ -610,6 +632,7 @@
               <h4>Digital Transformation</h4>
               <div class="issuer">MIT Professional Education</div>
               <p>Strategic digital transformation, cloud, IoT, and AI tools to lead impactful organizational change.</p>
+              <a class="cert-btn" href="#">View credential</a>
             </div>
             <div class="cert-card">
               <img src="https://via.placeholder.com/360x180?text=Tec+de+Monterrey" alt="Sample certificate image" loading="lazy">
