@@ -229,6 +229,19 @@
   .skill-cat:last-child{margin-bottom:0;}
   .skill-cat h4{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:.55rem;}
 
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;}
+  @media (max-width:900px){.course-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.course-grid{grid-template-columns:1fr;}}
+  .course-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.5rem;display:flex;flex-direction:column;transition:.25s;
+  }
+  .course-card:hover{border-color:var(--amber);transform:translateY(-3px);}
+  .course-card .course-title{font-size:1.05rem;font-weight:600;margin-bottom:.8rem;line-height:1.3;}
+  .course-card .course-provider{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text-dim);margin-bottom:.9rem;}
+  .course-card p{color:var(--text-mut);font-size:.93rem;flex-grow:1;}
+  .course-card span{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;}
+
   /* ---------- CONTACT ---------- */
   .contact-wrap{
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
@@ -258,6 +271,7 @@
       <a href="#experiencia">Experience</a>
       <a href="#proyectos">Projects</a>
       <a href="#liderazgo">Leadership</a>
+      <a href="#cursos">Cursos</a>
       <a href="#educacion">Education</a>
       <a href="#contacto">Contact</a>
     </nav>
@@ -513,6 +527,36 @@
           <li>Founder — SE-e Café Project (collaboration across Canada, Guatemala, the U.S., and Mexico)</li>
           <li>Student representative — high school and university</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="block" id="cursos">
+    <div class="container">
+      <div class="block-head reveal">
+        <div class="eyebrow">Cursos</div>
+        <h2>Capacitaciones y cursos impartidos para diferentes audiencias.</h2>
+      </div>
+      <div class="course-grid reveal">
+        <div class="course-card">
+          <span>Bootcamp</span>
+          <h3 class="course-title">Bootcamp de Python para Ciencia de Datos</h3>
+          <div class="course-provider">Python Monterrey</div>
+          <p>Curso intensivo diseñado para desarrollar habilidades en análisis de datos, visualización y modelado con Python para estudiantes y profesionales.</p>
+        </div>
+        <div class="course-card">
+          <span>Taller</span>
+          <h3 class="course-title">Introducción a Power BI y análisis de datos</h3>
+          <div class="course-provider">Grupo Lamosa</div>
+          <p>Taller práctico para equipos de trabajo que cubre creación de dashboards, reportes y métricas clave en Power BI.</p>
+        </div>
+        <div class="course-card">
+          <span>Curso</span>
+          <h3 class="course-title">Analítica avanzada con Python</h3>
+          <div class="course-provider">Data Center, Algorithms &amp; Society</div>
+          <p>Programa educativo con enfoque en modelado estadístico, machine learning y soluciones de IA aplicadas a problemas reales.</p>
+        </div>
       </div>
     </div>
   </section>
