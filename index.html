@@ -274,6 +274,9 @@
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
     padding:clamp(2rem,5vw,3.5rem);display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:center;
   }
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;margin-top:1.5rem;}
+  .whatsapp-btn{background:#25D366;color:#0A0F1C;border:1px solid rgba(37,211,102,.3);}
+  .whatsapp-btn:hover{background:#1ebe5b;}
   @media (max-width:760px){.contact-wrap{grid-template-columns:1fr;}}
   .contact-wrap h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.8rem;}
   .contact-wrap p{color:var(--text-mut);max-width:44ch;}
@@ -756,7 +759,10 @@
           <div class="eyebrow">Contact</div>
           <h2>Let's build something with data.</h2>
           <p>Whether it's about an opportunity, a collaboration, or a conversation about optimization, data science, or tech community — I'd love to talk.</p>
-          <a href="mailto:mariafernanda.ccw@gmail.com" class="btn btn-primary" style="margin-top:1.5rem;">Email me</a>
+          <div class="contact-actions">
+            <a href="mailto:mariafernanda.ccw@gmail.com" class="btn btn-primary">Email me</a>
+            <a href="https://wa.me/528126833483" target="_blank" rel="noopener" class="btn whatsapp-btn">WhatsApp</a>
+          </div>
         </div>
         <ul class="contact-list">
           <li><span class="ico mono">@</span><a href="mailto:mariafernanda.ccw@gmail.com">mariafernanda.ccw@gmail.com</a></li>
