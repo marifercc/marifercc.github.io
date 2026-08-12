@@ -213,6 +213,8 @@
   .card p{color:var(--text-mut);font-size:.9rem;flex-grow:1;}
   .card-stack{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem;}
   .card-stack span{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-dim);border:1px solid var(--line);border-radius:4px;padding:.15rem .5rem;}
+  .project-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.85rem;}
+  .project-logo{width:34px;height:auto;border-radius:8px;background:rgba(255,255,255,.05);padding:.45rem;}
 
   /* ---------- LEADERSHIP EXTRA ---------- */
   .extra-box{margin-top:var(--sp-4);border:1px dashed var(--line);border-radius:var(--radius);padding:1.3rem 1.5rem;}
@@ -303,7 +305,7 @@
   <div class="nav-inner">
     <div class="brand"><span class="brand-mark">MF</span> María Fernanda Cuevas</div>
     <nav class="links" id="navLinks">
-      <a href="#inicio">Home</a>
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -323,7 +325,7 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero" id="inicio">
+  <section class="hero" id="home">
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">Data Scientist · Engineer · Mathematician</div>
@@ -464,42 +466,59 @@
       </div>
       <div class="card-grid reveal">
         <div class="card">
-          <div class="card-cat">Optimization</div>
+          <div class="project-meta">
+            <img src="assets/logos/tec.png" alt="Tec de Monterrey" class="project-logo">
+            <div class="card-cat">Optimization</div>
+          </div>
           <h3>Ant Colony Route Optimization (ACO)</h3>
           <p>Route optimization system using ACO metaheuristics applied to logistics and autonomous vehicle path planning. Benchmarked against greedy and genetic algorithms to evaluate convergence speed.</p>
           <div class="card-stack"><span>Python</span><span>ACO</span><span>Logistics</span></div>
           <a href="#TODO-link-proyecto" class="project-link">View code</a>
         </div>
         <div class="card">
-          <div class="card-cat">Computer vision</div>
+          <div class="project-meta">
+            <img src="assets/logos/tec.png" alt="Tecnológico de Monterrey" class="project-logo">
+            <div class="card-cat">Computer vision</div>
+          </div>
           <h3>Traffic Detection on a Ford Expedition</h3>
           <p>Real-time traffic detection system deployed in-vehicle, using object detection models (YOLO) on a live camera feed to identify cars, pedestrians, and traffic lights.</p>
           <div class="card-stack"><span>Python</span><span>OpenCV</span><span>YOLO</span></div>
           <a href="#TODO-link-proyecto" class="project-link">View code</a>
         </div>
         <div class="card">
-          <div class="card-cat">Fintech</div>
+          <div class="project-meta">
+            <img src="assets/logos/banorte.png" alt="Banorte" class="project-logo">
+            <div class="card-cat">Fintech</div>
+          </div>
           <h3>BANORTE Youth Banking Solution</h3>
           <p>Youth-focused banking solution with a mobile app and web platform, integrating AI for financial personalization. Top 10 at HackMTY 2024, +25% engagement in prototype testing.</p>
           <div class="card-stack"><span>Swift</span><span>Node.js</span><span>Angular</span></div>
           <a href="#TODO-link-proyecto" class="project-link">View code</a>
         </div>
         <div class="card">
-          <div class="card-cat">Sports</div>
+          <div class="project-meta">
+            <img src="assets/logos/toluca.png" alt="Toluca" class="project-logo">
+            <div class="card-cat">Sports</div>
+          </div>
           <h3>Sports Analytics — Women's Football</h3>
           <p>Data models across 200+ matches to identify performance and strategy patterns, improving analysis accuracy by 20%.</p>
           <div class="card-stack"><span>Python</span><span>R</span><span>Excel</span></div>
           <a href="#TODO-link-proyecto" class="project-link">View code</a>
         </div>
         <div class="card">
-          <div class="card-cat">Social impact</div>
+          <div class="project-meta">
+            <img src="assets/logos/itam.png" alt="ITAM" class="project-logo">
+            <div class="card-cat">Social impact</div>
+          </div>
           <h3>Combating Illegal Fishing in Mexico</h3>
           <p>Analyzed 100,000+ data points with NGOs to identify illegal activity hotspots. Built Tableau dashboards that cut reporting time by 15%.</p>
           <div class="card-stack"><span>Tableau</span><span>Python</span><span>APIs</span></div>
           <a href="#TODO-link-proyecto" class="project-link">View code</a>
         </div>
         <div class="card">
-          <div class="card-cat">CRM</div>
+          <div class="project-meta">
+            <div class="card-cat">CRM</div>
+          </div>
           <h3>Real Estate Administrative Support</h3>
           <p>Managed and optimized CRM systems, improving data accuracy and automating processes through APIs.</p>
           <div class="card-stack"><span>CRM</span><span>APIs</span></div>
