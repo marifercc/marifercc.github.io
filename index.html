@@ -7,9 +7,10 @@
 <meta name="description" content="Portfolio of María Fernanda Cuevas Chavarría: Data Scientist, Engineer and Mathematician. Projects, experience and leadership in data science and AI.">
 <meta property="og:title" content="María Fernanda Cuevas Chavarría — Data Scientist & Engineer">
 <meta property="og:description" content="Portfolio of María Fernanda Cuevas Chavarría: Data Scientist, Engineer and Mathematician. Projects, experience and leadership in data science and AI.">
-<meta property="og:image" content="maria-fernanda.jpg">
+<meta property="og:image" content="https://marifercc.github.io/maria-fernanda.jpg">
 <meta property="og:url" content="https://marifercc.github.io/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -297,6 +298,21 @@
   footer{padding:2.2rem 0;border-top:1px solid var(--line);}
   .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.8rem;color:var(--text-dim);}
   .footer-inner .mono{color:var(--text-dim);}
+
+  /* ---------- ADDED: private project tag ---------- */
+  .private-tag{
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--text-dim);
+    border:1px dashed var(--line);border-radius:4px;padding:.35rem .7rem;
+    display:inline-block;margin-top:.9rem;
+  }
+
+  /* ---------- ADDED: certificate carousel pause/resume control ---------- */
+  .cert-meta-row{display:flex;align-items:center;gap:.7rem;}
+  .carousel-toggle{
+    width:28px;height:28px;border:1px solid var(--line);border-radius:6px;background:none;
+    color:var(--text-mut);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;
+  }
+  .carousel-toggle:hover{color:var(--amber);border-color:var(--amber);}
 </style>
 </head>
 <body>
@@ -311,12 +327,13 @@
       <a href="#projects">Projects</a>
       <a href="#leadership">Leadership</a>
       <a href="#courses">Courses</a>
+      <a href="#certificates">Certificates</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-social">
-      <a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-cuevas-274614245" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-      <a href="https://github.com/marifercc" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      <a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-cuevas-274614245" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+      <a href="https://github.com/marifercc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -334,7 +351,7 @@
         <p class="hero-bio">I turn data into decisions — and decisions into human impact. I combine data science, engineering, and actuarial science to build solutions, from optimization algorithms to community tech programs, always with a human-centered approach.</p>
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="mailto:mariafernanda.ccw@gmail.com" class="btn btn-ghost">Get in touch</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
         <div class="stat-row">
           <div class="stat"><div class="num mono">1000+</div><div class="lbl">people trained through bootcamps and workshops</div></div>
@@ -473,7 +490,8 @@
           <h3>Ant Colony Route Optimization (ACO)</h3>
           <p>Route optimization system using ACO metaheuristics applied to logistics and autonomous vehicle path planning. Benchmarked against greedy and genetic algorithms to evaluate convergence speed.</p>
           <div class="card-stack"><span>Python</span><span>ACO</span><span>Logistics</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <!-- TODO: link real -->
+          <a href="https://github.com/marifercc/aco-route-optimization" target="_blank" rel="noopener noreferrer" class="project-link">View code</a>
         </div>
         <div class="card">
           <div class="project-meta">
@@ -483,7 +501,8 @@
           <h3>Traffic Detection on a Ford Expedition</h3>
           <p>Real-time traffic detection system deployed in-vehicle, using object detection models (YOLO) on a live camera feed to identify cars, pedestrians, and traffic lights.</p>
           <div class="card-stack"><span>Python</span><span>OpenCV</span><span>YOLO</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <!-- TODO: link real -->
+          <a href="https://github.com/marifercc/traffic-detection-ford-expedition" target="_blank" rel="noopener noreferrer" class="project-link">View code</a>
         </div>
         <div class="card">
           <div class="project-meta">
@@ -493,7 +512,8 @@
           <h3>BANORTE Youth Banking Solution</h3>
           <p>Youth-focused banking solution with a mobile app and web platform, integrating AI for financial personalization. Top 10 at HackMTY 2024, +25% engagement in prototype testing.</p>
           <div class="card-stack"><span>Swift</span><span>Node.js</span><span>Angular</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <!-- TODO: link real -->
+          <a href="https://github.com/marifercc/banorte-youth-banking" target="_blank" rel="noopener noreferrer" class="project-link">View code</a>
         </div>
         <div class="card">
           <div class="project-meta">
@@ -503,7 +523,8 @@
           <h3>Sports Analytics — Women's Football</h3>
           <p>Data models across 200+ matches to identify performance and strategy patterns, improving analysis accuracy by 20%.</p>
           <div class="card-stack"><span>Python</span><span>R</span><span>Excel</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <!-- TODO: link real -->
+          <a href="https://github.com/marifercc/sports-analytics-womens-football" target="_blank" rel="noopener noreferrer" class="project-link">View code</a>
         </div>
         <div class="card">
           <div class="project-meta">
@@ -513,7 +534,8 @@
           <h3>Combating Illegal Fishing in Mexico</h3>
           <p>Analyzed 100,000+ data points with NGOs to identify illegal activity hotspots. Built Tableau dashboards that cut reporting time by 15%.</p>
           <div class="card-stack"><span>Tableau</span><span>Python</span><span>APIs</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <!-- TODO: link real -->
+          <a href="https://github.com/marifercc/illegal-fishing-mexico" target="_blank" rel="noopener noreferrer" class="project-link">View code</a>
         </div>
         <div class="card">
           <div class="project-meta">
@@ -522,7 +544,7 @@
           <h3>Real Estate Administrative Support</h3>
           <p>Managed and optimized CRM systems, improving data accuracy and automating processes through APIs.</p>
           <div class="card-stack"><span>CRM</span><span>APIs</span></div>
-          <a href="#TODO-link-proyecto" class="project-link">View code</a>
+          <span class="private-tag">Private / confidential</span>
         </div>
       </div>
     </div>
@@ -544,7 +566,7 @@
           <ul class="t-list">
             <li>Won 1st place nationally at the undergraduate level with team "Más óptimo," reaching the best known result in 27 of 30 benchmark cases, ahead of teams from Mexico, Colombia, and Chile.</li>
             <li>Designed and implemented optimization algorithms for a real-world location routing problem with teammates Paola Mireles Ochoa and Valeria Arciga Valencia, in under a month.</li>
-            <li>Selected to present results at the SMIO Congress (Oct 2026) and CLAIO Bogotá (Nov 2026).</li>
+            <li>Selected to present results at the SMIO Congress (Oct 2026) and CLAIO Bogotá (Nov 2026). <!-- REVISAR FECHA --></li>
           </ul>
         </div>
         <div class="t-item">
@@ -611,19 +633,6 @@
           <li>Student representative — high school and university</li>
         </ul>
       </div>
-
-      <div class="extra-box reveal">
-        <h4>Community groups</h4>
-        <ul>
-          <li>Python Monterrey — Community organizer and AI event host</li>
-          <li>AWS Cloud TEC Student Community Day — Lead organizer</li>
-          <li>DigitalHubTEC / Women in Technology — Programs and partnerships coordinator</li>
-          <li>Data Center, Algorithms &amp; Society — Program lead for analytics bootcamps</li>
-          <li>Geostats — Data team lead for social impact research</li>
-          <li>SAIDM Student Council — Social impact leadership</li>
-          <li>SE-e Café Project — Founder of international collaboration</li>
-        </ul>
-      </div>
     </div>
   </section>
 
@@ -647,21 +656,21 @@
       </div>
       <div class="course-grid reveal">
         <div class="course-card">
-          <img src="https://via.placeholder.com/420x220?text=Data+Science" alt="Data Science bootcamp course image" loading="lazy">
+          <img src="assets/courses/python-data-science-bootcamp.jpg" alt="Python for Data Science Bootcamp cover image" loading="lazy" width="420" height="220">
           <span>Bootcamp</span>
           <h3 class="course-title">Python for Data Science Bootcamp</h3>
           <div class="course-provider">Python Monterrey</div>
           <p>An intensive program to build skills in data analysis, visualization, and modeling with Python for students and professionals.</p>
         </div>
         <div class="course-card">
-          <img src="https://via.placeholder.com/420x220?text=Power+BI" alt="Power BI workshop course image" loading="lazy">
+          <img src="assets/courses/power-bi-workshop.jpg" alt="Introduction to Power BI and Data Analysis workshop cover image" loading="lazy" width="420" height="220">
           <span>Workshop</span>
           <h3 class="course-title">Introduction to Power BI and Data Analysis</h3>
           <div class="course-provider">Grupo Lamosa</div>
           <p>Hands-on workshop for teams covering dashboard creation, reporting, and KPI development in Power BI.</p>
         </div>
         <div class="course-card">
-          <img src="https://via.placeholder.com/420x220?text=Analytics" alt="Advanced Analytics with Python course image" loading="lazy">
+          <img src="assets/courses/advanced-analytics-python.jpg" alt="Advanced Analytics with Python course cover image" loading="lazy" width="420" height="220">
           <span>Course</span>
           <h3 class="course-title">Advanced Analytics with Python</h3>
           <div class="course-provider">Data Center, Algorithms &amp; Society</div>
@@ -669,77 +678,83 @@
         </div>
       </div>
 
-      <div class="cert-section reveal">
+      <div class="cert-section reveal" id="certificates">
         <div class="cert-head">
           <div>
             <div class="eyebrow">Certificates</div>
             <h3>Awards and certificates rotating automatically.</h3>
           </div>
-          <div class="cert-meta">Autoplay every 4 seconds</div>
+          <div class="cert-meta-row">
+            <div class="cert-meta" id="certAutoplayLabel">Autoplay every 4 seconds</div>
+            <button type="button" class="carousel-toggle" id="certToggle" aria-label="Pause certificate autoplay" aria-pressed="false">⏸</button>
+          </div>
         </div>
         <div class="cert-carousel-wrap">
           <div class="cert-carousel" id="certCarousel">
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=IBM" alt="IBM certificate for Prompt Engineering" loading="lazy">
+              <img src="assets/certs/ibm-prompt-engineering.jpg" alt="IBM certificate for Mastering Prompt Engineering" loading="lazy" width="360" height="180">
               <span class="cert-meta">AI</span>
               <h4>Mastering Prompt Engineering</h4>
               <div class="issuer">IBM</div>
               <p>Effective instructions for AI language models, with skills in AI prompts and artificial intelligence.</p>
-              <a class="cert-btn" href="#">View credential</a>
+              <!-- TODO: link del certificado -->
+              <a class="cert-btn" href="https://marifercc.github.io/TODO-credential-ibm-prompt-engineering" target="_blank" rel="noopener noreferrer">View credential</a>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Datlas" alt="Datlas certificate for Data Analytics with Python" loading="lazy">
+              <img src="assets/certs/datlas-data-analytics-python.jpg" alt="Datlas certificate for 15 Introductory Techniques in Data Analytics with Python" loading="lazy" width="360" height="180">
               <span class="cert-meta">Data Analytics</span>
               <h4>15 Introductory Techniques in Data Analytics with Python</h4>
               <div class="issuer">Datlas</div>
               <p>Introductory analytics techniques using Python, including visualizations and data-driven insights.</p>
-              <a class="cert-btn" href="#">View credential</a>
+              <!-- TODO: link del certificado -->
+              <a class="cert-btn" href="https://marifercc.github.io/TODO-credential-datlas-data-analytics" target="_blank" rel="noopener noreferrer">View credential</a>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=MIT" alt="MIT Professional Education certificate for Digital Transformation" loading="lazy">
+              <img src="assets/certs/mit-digital-transformation.jpg" alt="MIT Professional Education certificate for Digital Transformation" loading="lazy" width="360" height="180">
               <span class="cert-meta">Digital Transformation</span>
               <h4>Digital Transformation</h4>
               <div class="issuer">MIT Professional Education</div>
               <p>Strategic digital transformation, cloud, IoT, and AI tools to lead impactful organizational change.</p>
-              <a class="cert-btn" href="#">View credential</a>
+              <!-- TODO: link del certificado -->
+              <a class="cert-btn" href="https://marifercc.github.io/TODO-credential-mit-digital-transformation" target="_blank" rel="noopener noreferrer">View credential</a>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Tec+de+Monterrey" alt="Tecnológico de Monterrey certificate for Prompt Power" loading="lazy">
+              <img src="assets/certs/tec-prompt-power.jpg" alt="Tecnológico de Monterrey certificate for Prompt Power" loading="lazy" width="360" height="180">
               <span class="cert-meta">Prompt Power</span>
               <h4>Prompt Power: Mastering AI through Prompts</h4>
               <div class="issuer">Tecnológico de Monterrey</div>
               <p>Explored prompt design and AI tools to innovate and create with intelligent systems.</p>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Udemy" alt="Udemy certificate for Power BI Data Analysis and Business Intelligence" loading="lazy">
+              <img src="assets/certs/udemy-power-bi.jpg" alt="Udemy certificate for Power BI Data Analysis and Business Intelligence" loading="lazy" width="360" height="180">
               <span class="cert-meta">Business Intelligence</span>
               <h4>Power BI: Data Analysis and Business Intelligence</h4>
               <div class="issuer">Udemy</div>
               <p>Hands-on BI training with Power BI, dashboards, and business reporting workflows.</p>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Codecademy" alt="Codecademy certificate for Cybersecurity fundamentals" loading="lazy">
+              <img src="assets/certs/codecademy-cybersecurity.jpg" alt="Codecademy certificate for Cybersecurity fundamentals" loading="lazy" width="360" height="180">
               <span class="cert-meta">Cybersecurity</span>
               <h4>Fundamentals of Cybersecurity Skill Path</h4>
               <div class="issuer">Codecademy</div>
               <p>Security fundamentals covering systems, networks, and cybersecurity best practices.</p>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Codecademy" alt="Codecademy certificate for analyzing data with SQL" loading="lazy">
+              <img src="assets/certs/codecademy-sql-analyze-data.jpg" alt="Codecademy certificate for analyzing data with SQL" loading="lazy" width="360" height="180">
               <span class="cert-meta">SQL</span>
               <h4>Analyze Data with SQL Skill Path</h4>
               <div class="issuer">Codecademy</div>
               <p>Data analysis with SQL queries, joins, aggregations, and real dataset exploration.</p>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Codecademy" alt="Codecademy certificate for learning SQL" loading="lazy">
+              <img src="assets/certs/codecademy-learn-sql.jpg" alt="Codecademy certificate for learning SQL" loading="lazy" width="360" height="180">
               <span class="cert-meta">SQL</span>
               <h4>Learn SQL Course</h4>
               <div class="issuer">Codecademy</div>
               <p>SQL basics for queries, data retrieval, and database interaction.</p>
             </div>
             <div class="cert-card">
-              <img src="https://via.placeholder.com/360x180?text=Google" alt="Google certificate for Data Foundations" loading="lazy">
+              <img src="assets/certs/google-data-foundations.jpg" alt="Google certificate for Data Foundations" loading="lazy" width="360" height="180">
               <span class="cert-meta">Data Foundations</span>
               <h4>Foundations: Data, Data, Everywhere</h4>
               <div class="issuer">Google</div>
@@ -814,13 +829,15 @@
           <p>Whether it's about an opportunity, a collaboration, or a conversation about optimization, data science, or tech community — I'd love to talk.</p>
           <div class="contact-actions">
             <a href="mailto:mariafernanda.ccw@gmail.com" class="btn btn-primary">Email me</a>
-            <a href="https://wa.me/528126833483" target="_blank" rel="noopener" class="btn whatsapp-btn">WhatsApp</a>
+            <a href="https://wa.me/528126833483" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn">WhatsApp</a>
+            <!-- TODO: subir el archivo real del CV a assets/ -->
+            <a href="assets/CV-Maria-Fernanda-Cuevas.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Download CV</a>
           </div>
         </div>
         <ul class="contact-list">
           <li><span class="ico mono">@</span><a href="mailto:mariafernanda.ccw@gmail.com">mariafernanda.ccw@gmail.com</a></li>
-          <li><span class="ico mono">in</span><a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-cuevas-274614245" target="_blank" rel="noopener">linkedin.com/in/maría-fernanda-cuevas</a></li>
-          <li><span class="ico mono">gh</span><a href="https://github.com/marifercc" target="_blank" rel="noopener">github.com/marifercc</a></li>
+          <li><span class="ico mono">in</span><a href="https://www.linkedin.com/in/mar%C3%ADa-fernanda-cuevas-274614245" target="_blank" rel="noopener noreferrer">linkedin.com/in/maría-fernanda-cuevas</a></li>
+          <li><span class="ico mono">gh</span><a href="https://github.com/marifercc" target="_blank" rel="noopener noreferrer">github.com/marifercc</a></li>
           <li><span class="ico mono">•</span><span>Monterrey, NL, Mexico</span></li>
         </ul>
       </div>
@@ -867,9 +884,14 @@
   // certificate carousel
   const carousel = document.getElementById('certCarousel');
   const dotsContainer = document.getElementById('certDots');
+  const certToggle = document.getElementById('certToggle');
+  const certAutoplayLabel = document.getElementById('certAutoplayLabel');
   if(carousel && dotsContainer){
     const cards = carousel.querySelectorAll('.cert-card');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let activeIndex = 0;
+    let carouselTimer = null;
+    let userPaused = false;
 
     const renderDots = () => {
       dotsContainer.innerHTML = '';
@@ -891,19 +913,41 @@
       });
     };
 
-    renderDots();
-    setActive(0);
-
-    let carouselTimer = setInterval(() => {
-      setActive((activeIndex + 1) % cards.length);
-    }, 4000);
-
-    carousel.addEventListener('mouseenter', () => clearInterval(carouselTimer));
-    carousel.addEventListener('mouseleave', () => {
+    const startAutoplay = () => {
+      if(carouselTimer || userPaused || prefersReducedMotion) return;
       carouselTimer = setInterval(() => {
         setActive((activeIndex + 1) % cards.length);
       }, 4000);
-    });
+    };
+
+    const stopAutoplay = () => {
+      clearInterval(carouselTimer);
+      carouselTimer = null;
+    };
+
+    renderDots();
+    setActive(0);
+
+    if(prefersReducedMotion && certAutoplayLabel){
+      certAutoplayLabel.textContent = 'Autoplay disabled (reduced motion)';
+    } else {
+      startAutoplay();
+    }
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    if(certToggle){
+      certToggle.addEventListener('click', () => {
+        userPaused = !userPaused;
+        certToggle.textContent = userPaused ? '▶' : '⏸';
+        certToggle.setAttribute('aria-pressed', String(userPaused));
+        certToggle.setAttribute('aria-label', userPaused ? 'Resume certificate autoplay' : 'Pause certificate autoplay');
+        if(userPaused){ stopAutoplay(); } else { startAutoplay(); }
+      });
+    }
 
     window.addEventListener('resize', () => setActive(activeIndex));
   }
